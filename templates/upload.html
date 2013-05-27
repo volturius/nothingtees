@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block title %}{{ page_title }}{% endblock %}
+
+{% block shopping %} {% endblock %}
+
+{% block content %}
+
+<a href="/admin">Admin Home</a>
+
+<br>
+{% if msg %}
+	<p class="errorlist">{{ msg }}</p>
+{% else %}
+	<br>
+{% endif %}
+<br>
+        <p>
+                        <form action="/admin/upload" enctype="multipart/form-data" method="post">
+
+                                <div><label>Title:</label></div>
+                                <div><input type="text" name="title" cols="80"></input></div>
+
+                                <div><label>Description:</label></div>
+                                <div><textarea name="description" rows="3" cols="80"></textarea></div>
+<!--
+                                <div><label>Tags: (space-separated list)</label></div>
+                                <div><textarea name="tags" rows="3" cols="80"></textarea></div>
+
+                                <div><label>Categories: (space-separated list)</label></div>
+                                <div><textarea name="categories" rows="3" cols="80"></textarea></div>
+-->
+
+                                <div><label>Price: (if different than default)</label></div>
+                                <div>$<input type="text" name="price"/ size="10" value="19.99"></div>
+
+                                <div><label>Image:</label></div>
+                                <div><input type="file" name="image"/></div>
+
+                                <div><label>Description:</label></div>
+                                <div><input type="submit" value="Upload New Shirt"></div>
+                        </form>
+        </p>
+{% endblock %}

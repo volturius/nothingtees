@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+{% block title %}{{ page_title }}{% endblock %}
+
+{% block shopping %} {% endblock %}
+
+{% block content %}
+
+        <p>
+<a href="/admin">Admin Home</a>
+        </p>
+
+<div id="bd">
+
+	{% if products %}
+<hr>
+		{% for product in products %}
+ 
+<br>
+<div class="yui-gc">
+<div class="yui-b">
+
+	<div class="yui-u">
+			<div class="edit_thumbnail"> <a href="/detail?id={{ product.key }}"> <img src="/img?id={{ product.key }}&thumbsize=50" title="{{ product.description }}" /></a></div>
+	</div>
+	<div class="yui-u first">
+			<form action="/admin/edit" enctype="multipart/form-data" method="post">
+<!--
+                                <div><label>Tags: (space-separated list)</label></div>
+                                <div><textarea name="tags" rows="3" cols="80"></textarea></div>
+
+                                <div><label>Categories: (space-separated list)</label></div>
+                                <div><textarea name="categories" rows="3" cols="80"></textarea></div>
+-->
+
+                                <div><label>Available?</label>
+                                <input type="checkbox" name="available" size="10" {% if product.available %} checked {% endif %} >
+				</div>
+
+                                <div><label>Title: {{ product.title }}</label></div>
+                                <input type="text" name="title" cols="50"></input>
+
+                                <div><label>Description: {{ product.description }}</label></div>
+                                <textarea name="description" rows="3" cols="50"></textarea>
+
+                                <div><label>Price: </label>
+                                $<input type="text" name="price"/ size="10" value="{{ product.price }}">
+				</div>
+
+                                <div><label>Image:</label>
+                                <input type="file" name="image"/>
+				</div>
+
+                                <div><label>DELETE THIS ITEM?</label>
+                                <input type="checkbox" name="delete" size="10" >
+				</div>
+
+				<div><input type="submit" value="Update Shirt"></div>
+                                <input type="hidden" name="id" value="{{ product.key }}"/>
+                        </form>
+		
+
+	</div>
+</div>
+</div>
+
+<br>
+<hr>
+
+		
+		{% endfor %}
+	{% endif %}
+</div>
+</div>
+
+{% endblock %}

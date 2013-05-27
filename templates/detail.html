@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% block title %}{{ page_title }}{% endblock %}
+{% block content %}
+
+	<div id="doc" class="yui-t5">
+	<div id="yui-main">
+
+	<div class="yui-b">
+
+		<div class="detail">
+
+			<div class="yui-g" style="height: 25%; margin: auto;"></div>
+
+			<div class="yui-gb"> 
+
+				<div class="yui-u first" style="width: 25%">&nbsp;</div>
+
+				<div class="yui-u" style="width: 50%; margin: auto;">
+<!--				<div class="overlay_thumbnail"> -->
+					<img src="/img?id={{ product.key }}&thumb=1" title="{{ product.description }}" /> 
+<!--				</div> -->
+				</div>
+
+				<div class="yui-u" style="width: 25%; margin: auto;">&nbsp;</div>
+
+			</div>
+
+		</div>
+	</div>
+
+	<div class="yui-b">
+			<div class="product">
+				<span class="product-title">{{ product.title }}</span>
+				<br>
+				<span class="product-description">{{ product.description }}</span>
+				<br>
+				<select class="product-attr-size">
+					<option value="small">small</option>
+					<option value="medium">medium</option>
+					<option value="large">large</option>
+					<option value="large">X-large</option>
+					<option value="large">XX-large</option>
+				</select>
+				<br>
+					Price: <span class="product-price">{{ product.price }}</span>
+				<br>
+					Shipping: <span class="product-shipping">$5.99</span>
+				<br>
+				<span class="googlecart-add-button"></span>
+				</div>
+			</div>
+	</div>
+
+	<! -- Recommendations -->
+	<div class="yui-b">
+		{% for product in recommended_products %}
+			<div class="recommended">
+
+				<a href="/detail?id={{ product.key }}"><div class="main_thumbnail"><img src="/img?id={{ product.key }}&thumb=1" title="{{ product.description }}" /></div></a>
+			</div>
+		{% endfor %}
+	</div>
+
+{% endblock %}

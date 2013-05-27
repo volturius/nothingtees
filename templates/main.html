@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}{{ page_title }}{% endblock %}
+
+{% block content %}
+ 
+<!-- this is main.html 1 -->
+<div id="bd">
+<div id="yui-main">
+<div class="yui-b">
+
+            {{ body }}
+
+{# COMMENT: This builds the shirt listing #}
+{% for shirt in shirts %}
+
+	<a href="/detail?id={{ shirt.key }}"><div class="main_thumbnail"> <img src="/img?id={{ shirt.key }}&thumb=1" title="{{ shirt.description }}" /></div></a>
+
+{% endfor %}
+
+
+
+
+
+</div>
+</div>
+</div>
+
+<!-- this is main.html 2 -->
+{% endblock %}

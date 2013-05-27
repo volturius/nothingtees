@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>curvyCorners Demo</title>
+<script type="text/JavaScript" src="/script/rounded_corners_lite.inc.js"></script>
+<style>
+
+.myBox
+{
+    margin: 0 auto;
+    border: 0px solid #ffffff;
+    color: #ffffff;
+    width: 60%;
+    padding: 20px;
+    text-align: left;
+    background-color: #ff0000;
+    border: 3px solid #ffffff;
+    /*
+    background-image: url(back_test2.jpg);
+    background-repeat: no-repeat;
+    */
+}
+
+html,body{
+    height: 100%;
+    text-align: center;
+  	 font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    margin: 0px;
+    background-image: url(grass.jpg);
+}
+
+</style>
+<script type="text/JavaScript">
+
+  window.onload = function()
+  {
+      /*
+      The new 'validTags' setting is optional and allows
+      you to specify other HTML elements that curvyCorners
+      can attempt to round.
+
+      The value is comma separated list of html elements
+      in lowercase.
+
+      validTags: ["div", "form"]
+
+      The above example would enable curvyCorners on FORM elements.
+      */
+      settings = {
+          tl: { radius: 20 },
+          tr: { radius: 20 },
+          bl: { radius: 20 },
+          br: { radius: 20 },
+          antiAlias: true,
+          autoPad: true,
+          validTags: ["div"]
+      }
+
+      /*
+      Usage:
+
+      newCornersObj = new curvyCorners(settingsObj, classNameStr);
+      newCornersObj = new curvyCorners(settingsObj, divObj1[, divObj2[, divObj3[, . . . [, divObjN]]]]);
+      */
+      var myBoxObject = new curvyCorners(settings, "myBox");
+      myBoxObject.applyCornersToAll();
+  }
+  
+</script>
+</head>
+
+<body>
+
+    <br><br><br><br>
+
+    <div class="myBox">
+
+<TABLE>
+<TR>
+	<TD WIDTH=178 HEIGHT=178> 
+		<div style="width: 178px; heigh: 178px; background-image: url(/images/header.gif)">asdfasdf<br>asdfasdf<div/>
+	</TD>
+	<TD WIDTH=178 HEIGHT=178>Georgia</TD>
+</TR>
+</TABLE>
+
+
+    </div>
+
+
+</body>
+</html>

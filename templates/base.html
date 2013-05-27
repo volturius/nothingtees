@@ -1,0 +1,52 @@
+<html id="yfi_fp">
+	<head>
+		<title>{% block title %}{% endblock %}</title>
+		<link rel="stylesheet" type="text/css" href="/css/reset-fonts-grids.css">
+		<link rel="stylesheet" type="text/css" href="/css/nothingtees.css">
+	</head>
+	<body>
+
+{% block shopping %}
+<!--		<script id="googlecart-script" type="text/javascript" src="http://checkout.google.com/seller/gsc/beta/cart-v1.js?mid=111452295297579&currency=USD"> </script> -->
+		<script id="googlecart-script" type="text/javascript" src="http://sandbox.google.com/checkout/seller/gsc/beta/cart-v1.js?mid=111452295297579&currency=USD"> </script>
+{% endblock %}
+		<div id="doc" class="mainpage">
+
+		<div id="hd">
+			{% block header %}
+				<a href="/"><img src="/images/header.gif" /></a>
+				<br>
+				<br>
+				<br>
+			{% endblock %}
+ 		</div>
+
+	{% block content %}<!-- this is base.html -->{% endblock %}
+
+	{% block footer %}
+<div id="ft">
+
+		<br>
+
+<p align="center"> Each Nothing tee is hand made in the USA from the highest quality tee shirts available.</p>
+	<div class="yui-gb"> 
+		<div class="yui-u first" align="center"> <img src="http://code.google.com/appengine/images/appengine-silver-120x30.gif" alt="Powered by Google App Engine" /> </div>
+
+		<div class="yui-u" align="center">
+<p> All content (C) 2008 NothingTees.com</p>
+		</div>
+
+		<div class="yui-u" align="center">
+	<link rel="stylesheet" href="https://checkout.google.com/seller/accept/s.css" type="text/css" media="screen" />
+	<script type="text/javascript" src="https://checkout.google.com/seller/accept/j.js"></script>
+	<script type="text/javascript">showMark(2);</script>
+	<noscript><img src="https://checkout.google.com/seller/accept/images/ht.gif" width="182" height="44" alt="Google Checkout Acceptance Mark" /></noscript>
+		</div>
+
+	{% endblock %}
+
+</div>
+    </body>
+</html>
+
+

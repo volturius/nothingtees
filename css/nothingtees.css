@@ -1,0 +1,87 @@
+#yfi_fp {
+	background-color: #8A8F91;
+	background-image: url(/images/o.gif);
+/*
+	background-image: url(/images/flagpoletile.jpg);
+	background-image: url(http://www.wonderbackgrounds.com/retro/backgrounds/retro_background_13a.gif);
+*/
+}
+
+body { 
+/*	background-color: #000000*/
+}
+
+div.overlay_thumbnail {
+	height:160px;
+	text-align:center;
+	width:160px;
+}
+
+.main_thumbnail a:link {
+	color:#FFFFFF;
+	font-size:14px;
+	text-decoration:none;
+	padding:5px;
+	background-color:#DDEEFF;
+}
+
+div.mainpage {
+	border: .2em;
+	position: relative;
+        padding: 10px;
+	text-align: center;
+	background-color: #FFFFFF;
+}
+
+  
+div.detail {
+	/*float: left;*/
+	/*background-color: #FFFFFF;*/
+	background-image: url(/img?id=agtub3RoaW5ndGVlc3INCxIHUHJvZHVjdBgpDA);
+	height: 400px;
+	width: 400px;
+	border-color: #000000;
+	border: solid 1px;/* dotted #100;*/
+	position: relative;
+        padding: 0px;
+	text-align: center;
+	margin: 2px;
+}
+
+div.edit_thumbnail {
+	float: left;
+	height: 50;
+	width: 50;
+	background-color: #FFFFFF;
+	border-color: #000000;
+	border: solid 1px;/* dotted #100;*/
+	position: relative;
+        padding: 5;
+	text-align: center;
+	margin: 2px;
+}
+
+
+div.main_thumbnail {
+	float: left;
+	height: 160px;
+	width: 160px;
+	background-color: #FFFFFF;
+	border-color: #000000;
+	border: solid 1px;/* dotted #100;*/
+	position: relative;
+        padding: 10px;
+	text-align: center;
+	margin: 2px;
+}
+
+  
+div.float p {
+	text-align: center;
+	height: 178px;
+	width: 178px;
+}
+
+.errorlist {
+	color:#FF0000;
+}
